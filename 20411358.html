@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Abdulwahid</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: black;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 200px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center; 
+}
+.logo{
+    font-family:Trattatello, fantasy;
+    text-decoration: none;
+    color: hsl(206, 83%, 50%);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+.logo:hover{
+    color: white;
+}
+.navigation a,
+#language-toggle {
+    color: hsl(206, 83%, 50%);
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.navigation a:hover,
+#language-toggle:hover {
+    color: hwb(0 98% 2%);
+}
+#language-toggle {
+    font-family: inherit; 
+    font-size: 1.1em;
+    padding-left: 30px;
+}
+
+section{
+    padding: 100px 200px;
+}
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center; 
+    background:url("https://i.ibb.co/S3cV3RW/wallpaper24.jpg" ) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.main h2{
+    font-family: Luminari;
+    color: white;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+.main h2 span{
+    font-family: 'Times New Roman', Times, serif;
+    display: inline-block;
+    margin-top: 10px;
+    color: aquamarine;
+    font-size: 3em;
+    font-weight: 600;
+}
+.main h3{
+    font-family: 'Times New Roman', Times, serif;
+    color: whitesmoke;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.main-btn{
+    color: aliceblue;
+    background-color: #5858ff;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    transition: 0.5s ease;
+}
+.main-btn:hover{
+    background-color: blue;
+    transform: scale(1.1);
+}
+.social-icons a{
+    color: white;
+    font-size: 1.8em;
+    padding-right: 30px;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    color: blue;
+    font-size: 3em;
+    font-weight: 800px;
+    margin-bottom: 30px;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card{
+    background-color: hsl(208, 87%, 91%);
+    width: 340px;
+    box-shadow: 0 5px 25px rgba(1 1 1/15%);
+    border-radius: 10px;
+    padding: 30px;
+    margin: 15px;
+    transition: 0.5s ease;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.icon{
+    color: hsl(240, 100%, 61%);
+    font-size: 100px;
+    align-items: center;
+}
+.info{
+    text-align: center;
+}
+.info h3{
+    color: hsl(240, 100%, 61%);
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
+/* cards of projects */
+.projects{
+    background: url("https://i.ibb.co/S3cV3RW/wallpaper24.jpg" ) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.projects.content{
+    margin-top: 30px;
+}
+.project-card{
+    background-color: white;
+    border: 1px solid white ;
+    min-height: 14em;
+    width: 23em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    transition: 0.7s ease;
+}
+.project-card:hover{
+    transform: scale(1.1);
+}
+.project-card:hover .project-image{
+    opacity: 0.9;
+}
+
+.project-image img{
+    width: 100%;
+}
+.project-info{
+    padding: 1em;
+}
+.project-category{
+    font-size: 0.8em;
+    color: black;
+}
+.project-title{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 10px;
+}
+.more-details{
+    text-decoration: none;
+    color: #5858ff;
+}
+.more-details:hover{
+    color:#4e0096
+}
+.content .icon{
+    font-size: 72px;
+}
+.content .info h3{
+    color: black;
+}
+.content .info p{
+    font-size: 24px;
+
+}
+.footer{
+    background: hsl(240, 100%, 10%);
+    color: #fff;
+    padding: 2em; 
+    display: flex;
+    justify-content: space-between;
+}
+.footer-title{
+    font-size: 1.3em;
+    font-weight: 600;
+}
+.footer-title span{
+    color: hsl(240, 100%, 77%);
+}
+/*media query*/
+@media (max-width: 1023px){
+    header{
+        padding: 12px 20px;
+    }
+    .navigation a{
+        padding-left: 10px;
+    }
+    .title{
+        font-size: 1.8em;
+    }
+    section{
+        padding: 80px 20px;
+    }
+    .main-content h2{
+        font-size: 1em;
+    }
+    .main-content h3{
+        font-size: 1.6em;
+    }
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width:641px){
+    body{
+        font-size: 12px;
+    }
+    .main-content h2{
+        font-size: 0.8em;
+    }
+    .main-content h3{
+        font-size: 1.4em;
+    }
+}
+@media (max-width:300px){
+    body{
+        font-size: 10px;
+    }
+}
+
+    </style>
+</head>
+<body>
+   <header>
+    <!-- when user click on Mohammed logo it will back to the start page -->
+    <a href="#" class="logo">Mohammed</a>
+    <nav class="navigation">
+        <a href="#Services">Service</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <button id="language-toggle" onclick="toggleLanguage()">العربية</button>
+    </nav>
+   </header>
+
+   <section class="main">
+    <div>
+        <h2>Hello, I'm Mohammed Abdulwahid<br><span>Software developer</span></h2>
+        <h3>I provide online Services</h3>
+        <a href="#projects" class="main-btn">View my work</a>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/feed/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://x.com/210g_" ><i class="fab fa-square-x-twitter"></i></i></a>
+            <a href="https://wa.me/966538947986"><i class="fab fa-whatsapp-square"></i></a>
+        </div>
+    </div>
+   </section>
+   <!-- this section for cards Service -->
+   <section class="cards" id="Services">
+    <h2 class="title">Services</h2>
+    <div class="content">
+        <div class="card">
+            <div class="icon">
+                <i class="fa-regular fa-file-word"></i>
+            </div>
+            <div class="info">
+                <h3>Writing report</h3>
+                <p>Write complete report in Word file with table content,headers, etc...</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="icon">
+                <i class="fa-solid fa-code"></i>
+            </div>
+            <div class="info">
+                <h3>Frontend website</h3>
+                <p>Beautiful front-end website design with smooth animation using html,css,js</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="icon">
+                <i class="fa-brands fa-python"></i>
+            </div>
+            <div class="info">
+                <h3>develope Projects & software by Python</h3>
+                <p>Building python projects using the python libraries,provide clean code with comments</p>
+            </div>
+        </div>
+    </div>
+   </section>
+   <!-- section for projects -->
+   <section class="projects" id="projects">
+    <h2 class="title">Projects</h2>
+    <div class="content">
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://i.ibb.co/gPg7swP/project1.png" >
+            </div>
+            <div class="project-info">
+                <p class="project-category">develope Projects & software by Python</p>
+                <strong class="project-title">
+                    <span>Text Data Extraction</span>
+                    <a href="https://www.linkedin.com/posts/mohammed-almolike-98b452262_python-pythonabrdeveloper-pythonabrproject-activity-7239348586344321025-fLfw?utm_source=share&utm_medium=member_desktop" class="more-details">More details</a>
+                </strong>
+            </div> 
+        </div>
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://i.ibb.co/BL2R7GB/Project4.png"  >
+            </div>
+            <div class="project-info">
+                <p class="project-category">Frontend website</p>
+                <strong class="project-title">
+                    <span>Guss Word game</span>
+                    <a href="https://gusswords.tiiny.site/" class="more-details">More details</a>
+                </strong>
+            </div> 
+        </div>
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://i.ibb.co/Wfr1Bw1/progect5.png" >
+            </div>
+            <div class="project-info">
+                <p class="project-category">Frontend website</p>
+                <strong class="project-title">
+                    <span>Personal website</span>
+                    <a href="https://amaranth-jayne-22.tiiny.site" class="more-details">More details</a>
+                </strong>
+            </div> 
+        </div>
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://i.ibb.co/v1m2mZF/Project3.png">
+            </div>
+            <div class="project-info">
+                <p class="project-category">Writing report</p>
+                <strong class="project-title">
+                    <span>table content,headers</span>
+                    <a href="https://docs.google.com/document/d/1zJF1RmjlcN-5ljKFSa4KwRi511RZXimI/edit?usp=drive_link&ouid=113871495426679081901&rtpof=true&sd=true" class="more-details">More details</a>
+                </strong>
+            </div> 
+        </div>   
+    </div>
+   </section>
+   <!-- Contact section -->
+   <section class="cards Contact" id="contact">
+    <h2 class="title">Contact me for your project</h2>
+    <div class="content">
+        <div class="card">
+            <div class="icon">
+                <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="info">
+                <h3>Phone</h3>
+                <p>+966538947986</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="icon">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="info">
+                <h3>Email</h3>
+                <p>mlike09763@gmail.com</p>
+            </div>
+        </div>
+    </div>
+   </section>
+   <!-- footer end of the page -->
+   <footer class="footer">
+    <p class="footer-title">Copyright @<span> Mohammed Abdulwahid</span></p>
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/feed/"><i class="fab fa-linkedin"></i></a>
+        <a href="https://x.com/210g_" ><i class="fab fa-square-x-twitter"></i></i></a>
+        <a href="https://wa.me/966538947986"><i class="fab fa-whatsapp-square"></i></a>
+    </div>
+   </footer>
+</body>
+<script>
+    document.querySelectorAll('.more-details').forEach(link => {
+        link.setAttribute('target', '_blank');
+    });
+    document.querySelectorAll('.social-icons a').forEach(link => {
+        link.setAttribute('target', '_blank');
+    });
+    let isArabic = false; // Track current language state
+
+    function toggleLanguage() {
+        document.body.style.direction = "rtl"; // For Arabic
+        document.body.style.direction = "ltr"; // For English
+        if (isArabic) {
+            // Switch to English
+            document.querySelector('.logo').textContent = "Mohammed";
+            document.querySelector('#language-toggle').textContent = "العربية";
+            document.querySelectorAll('.navigation a')[0].textContent = "Service";
+            document.querySelectorAll('.navigation a')[1].textContent = "Projects";
+            document.querySelectorAll('.navigation a')[2].textContent = "Contact";
+
+            document.querySelector('.main h2').innerHTML = "Hello, I'm Mohammed Abdulwahid<br><span>Software developer</span>";
+            document.querySelector('.main h3').textContent = "I provide online Services";
+            document.querySelector('.main-btn').textContent = "View my work";
+
+            document.querySelector('#Services .title').textContent = "Services";
+            document.querySelectorAll('#Services .card h3')[0].textContent = "Writing report";
+            document.querySelectorAll('#Services .card h3')[1].textContent = "Frontend website";
+            document.querySelectorAll('#Services .card h3')[2].textContent = "Develop Projects & Software by Python";
+
+            document.querySelector('#projects .title').textContent = "Projects";
+            document.querySelectorAll('.project-category')[0].textContent = "Develop Projects & Software by Python";
+            document.querySelectorAll('.project-category')[1].textContent = "Frontend website";
+            document.querySelectorAll('.project-category')[2].textContent = "Frontend website";
+            document.querySelectorAll('.project-category')[3].textContent = "Writing report";
+
+            document.querySelector('#contact .title').textContent = "Contact me for your project";
+            document.querySelectorAll('#contact .card h3')[0].textContent = "Phone";
+            document.querySelectorAll('#contact .card h3')[1].textContent = "Email";
+
+            document.querySelector('.footer-title').innerHTML = "Copyright @<span> Mohammed Abdulwahid</span>";
+
+            isArabic = false; // Set language state
+        } else {
+            // Switch to Arabic
+            document.querySelector('.logo').textContent = "محمد";
+            document.querySelector('#language-toggle').textContent = "English";
+            document.querySelectorAll('.navigation a')[0].textContent = "الخدمات";
+            document.querySelectorAll('.navigation a')[1].textContent = "المشاريع";
+            document.querySelectorAll('.navigation a')[2].textContent = "اتصل بي";
+
+            document.querySelector('.main h2').innerHTML = "مرحبا، أنا محمد عبد الواحد<br><span>مطور برامج</span>";
+            document.querySelector('.main h3').textContent = "أقدم خدمات عبر الإنترنت";
+            document.querySelector('.main-btn').textContent = "عرض أعمالي";
+
+            document.querySelector('#Services .title').textContent = "الخدمات";
+            document.querySelectorAll('#Services .card h3')[0].textContent = "كتابة تقارير";
+            document.querySelectorAll('#Services .card h3')[1].textContent = "تطوير واجهة الموقع";
+            document.querySelectorAll('#Services .card h3')[2].textContent = "تطوير المشاريع والبرمجيات باستخدام بايثون";
+
+            document.querySelector('#projects .title').textContent = "المشاريع";
+            document.querySelectorAll('.project-category')[0].textContent = "تطوير المشاريع والبرمجيات باستخدام بايثون";
+            document.querySelectorAll('.project-category')[1].textContent = "واجهة الموقع الأمامية";
+            document.querySelectorAll('.project-category')[2].textContent = "واجهة الموقع الأمامية";
+            document.querySelectorAll('.project-category')[3].textContent = "كتابة التقارير";
+
+            document.querySelector('#contact .title').textContent = "اتصل بي لمشروعك";
+            document.querySelectorAll('#contact .card h3')[0].textContent = "هاتف";
+            document.querySelectorAll('#contact .card h3')[1].textContent = "بريد إلكتروني";
+
+            document.querySelector('.footer-title').innerHTML = "حقوق الطبع والنشر @<span> محمد عبد الواحد</span>";
+
+            isArabic = true; // Set language state
+        }
+    }
+</script>
+</html>
